@@ -39,6 +39,16 @@ public function get($request)
 }
 ```
 
+#### APIRequest Object
+The `$request` parameter is an `APIRequest` object, allowing you to get :
+* the complete URI
+* the HTTP method
+* the resource
+* the extension
+* the filter
+* the sorting
+* the HTTP Headers
+
 ### Throwing exceptions
 If something goes wrong into the process, you can throw many exceptions :
 * BadRequestException : means parameters of this resource are missing or wrong.

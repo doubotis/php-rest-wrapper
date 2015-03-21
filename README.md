@@ -3,7 +3,6 @@ PHP Wrapper for managing easy Rest-based APIs
 
 ## Main features
 Some main features this java wrapper have :
-* Basic API Documentation support
 * Code of all requests are separated by files
 * Using reflexion to make coding easier
 

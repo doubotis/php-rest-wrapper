@@ -18,7 +18,7 @@ GET Base /
 GET POST Users /users
 GET POST DELETE User /users/([^/]+)
 GET POST Me /me
-GET POST MeTrails /me/itis
+GET POST MeItIs /me/itis
 ```
 
 This example will create 5 resources "/", "/users", "/users/...", "/me", "/me/itis".

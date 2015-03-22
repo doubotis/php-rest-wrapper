@@ -38,8 +38,9 @@ public function get($request)
     return $arr;
 }
 ```
+Additionnaly, if you want to open DB connections or files, you can override `init()` and `dealloc()` methods.
 
-#### APIRequest Object
+### APIRequest Object
 The `$request` parameter is an `APIRequest` object, allowing you to get :
 * the complete URI
 * the HTTP method

@@ -129,4 +129,16 @@ class UnavailableServiceException extends HTTPException
     }
 }
 
+class TeapotException extends HTTPException
+{
+    public function __construct($message = "I’m a teapot", $code = 418, Exception $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+    }
+
+    public function __toString() {
+        return __CLASS__ . ": [{$this->code}]: {$this->message}\n";
+    }
+}
+
 ?>

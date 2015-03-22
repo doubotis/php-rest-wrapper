@@ -17,7 +17,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class Base extends NativeImplementation implements IGet
+class Base extends NativeImplementation implements IGetHandler
 {
     public function init() {
         // Override this.

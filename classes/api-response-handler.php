@@ -18,6 +18,7 @@
  */
 
 include_once __DIR__ . "/api-impl.php";
+include_once __DIR__ . "/api-exceptions.php";
 include_once __DIR__ . "/../impl/_native.php";
 
 /* 

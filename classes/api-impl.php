@@ -17,19 +17,19 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-interface IGet {
+interface IGetHandler {
     public function get($request);
 }
 
-interface IPost {
+interface IPostHandler {
     public function post($request);
 }
 
-interface IPut {
+interface IPutHandler {
     public function put($request);
 }
 
-interface IDelete {
+interface IDeleteHandler {
     public function delete($request);
 }
 

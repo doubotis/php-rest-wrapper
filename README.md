@@ -2,7 +2,7 @@
 PHP Wrapper for managing easy Rest-based APIs
 
 ## Main features
-Some main features this java wrapper have :
+Some main features this PHP wrapper have :
 * Code of all requests are separated by files
 * Using reflexion to make coding easier
 * Handle XML and JSON responses. You use arrays, the Wrapper does the conversion.

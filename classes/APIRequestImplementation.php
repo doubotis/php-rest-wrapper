@@ -17,22 +17,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class Users extends NativeImplementation implements IGet
-{
-    public function init() {
-        // Override this.
-        // Ideal area to initiate PDO objects or open files.
-    }
+abstract class APIRequestImplementation {
     
-    public function dealloc() {
-        // Override this.
-        // Ideal area to close opened PDO objects and opened files.
-    }
-    
-    public function get($request) {
-        return array("testGet" => "testGet");
-    }
+    public abstract function init();
+    public abstract function dealloc();
+    public abstract function getPath();
 }
-
 
 ?>

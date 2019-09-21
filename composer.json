@@ -1,0 +1,7 @@
+{
+    "name": "doubotis/php-rest-wrapper",
+    "description": "A REST Wrapper for PHP",
+    "require": {
+        "php": "^7.2"
+    }
+}

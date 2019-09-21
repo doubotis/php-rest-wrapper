@@ -17,10 +17,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-abstract class NativeImplementation {
+require_once 'classes/responses/APIBinaryResponse.php';
+
+class APIImageResponse extends APIBinaryResponse {
     
-    public abstract function init();
-    public abstract function dealloc();
+    function __construct() {
+        
+    }
+    
+    public function asPNG() {
+        
+    }
+
 }
 
 ?>

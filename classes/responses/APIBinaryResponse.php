@@ -17,26 +17,24 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class PDOEntity {
+require_once 'classes/responses/APIResponse.php';
+
+class APIBinaryResponse extends APIResponse {
     
-    protected $_obj;
+    protected $_data;
     
-    public static function parseStatement($sth) {
-        $sth->execute();
-        $res = $sth->fetchAll();
+    function __construct() {
         
-        $entity = new PDOEntity();
-        $entity->setObject($res);
-        return $entity;
     }
     
-    public function setObject($obj) {
-        self::$_obj = $obj;
+    public function setData($data) {
+        $this->_data = $data;
     }
     
-    public function getObject() {
-        return self::$_obj;
+    public function asBinary() {
+        return $this->_data;
     }
+
 }
 
 ?>

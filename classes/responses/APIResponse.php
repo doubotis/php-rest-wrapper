@@ -17,25 +17,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-class Base extends NativeImplementation implements IGetHandler
-{
-    public function init() {
-        // Override this.
-        // Ideal area to initiate PDO objects or open files.
+abstract class APIResponse {
+    
+    function __construct() {
+        
     }
     
-    public function dealloc() {
-        // Override this.
-        // Ideal area to close opened PDO objects and opened files.
-    }
-    
-    public function get($request) {
-        return array(
-            "version" => "1.0",
-            "compilationDate" => time()
-        );
-    }
-}
+    public abstract function setData($data);
 
+}
 
 ?>

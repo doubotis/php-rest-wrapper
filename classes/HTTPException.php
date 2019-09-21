@@ -17,6 +17,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+namespace Doubotis\PHPRestWrapper;
+
 class HTTPException extends Exception
 {
     public function __construct($message = "HTTP Exception", $code = 500, Exception $previous = null)

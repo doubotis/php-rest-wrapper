@@ -17,6 +17,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+namespace Doubotis\PHPRestWrapper;
+
 abstract class APIRequestImplementation {
     
     public abstract function init();

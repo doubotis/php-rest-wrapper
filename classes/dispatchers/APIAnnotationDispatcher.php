@@ -18,6 +18,8 @@
  */
 require_once 'APIBaseDispatcher.php';
 
+namespace Doubotis\PHPRestWrapper\Dispatchers;
+
 class APIAnnotationDispatcher extends APIBaseDispatcher
 {
     function __construct($filePath) {

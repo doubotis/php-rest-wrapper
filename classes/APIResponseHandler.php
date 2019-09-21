@@ -21,6 +21,8 @@ include_once __DIR__ . "/api-impl.php";
 include_once __DIR__ . "/api-exceptions.php";
 include_once __DIR__ . "/../impl/_native.php";
 
+namespace Doubotis\PHPRestWrapper;
+
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates

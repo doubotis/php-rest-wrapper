@@ -19,6 +19,8 @@
 
 require_once 'classes/responses/APIBinaryResponse.php';
 
+namespace Doubotis\PHPRestWrapper\Responses;
+
 class APIImageResponse extends APIBinaryResponse {
     
     function __construct() {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/dispatchers/APIAnnotationDispatcher.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/APIResponseHandler.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/dispatchers/APIFileResourceDispatcher.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/responses/APIResponse.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/README.md</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/responses/APIStructuredResponse.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/responses/APIImageResponse.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/dispatchers/APIBaseDispatcher.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/APIRequestImplementation.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/APIMethodImplementation.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/APIRequest.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/utils/strings.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/responses/APIBinaryResponse.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/classes/HTTPException.php</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/composer.json</file>
+            <file>file:/E:/Documents/GitHub/php-rest-wrapper/api_v1.php</file>
+        </group>
+    </open-files>
+</project-private>

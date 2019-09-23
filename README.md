@@ -17,7 +17,8 @@ require {
 
 ## How to use
 
-```
+### Full example
+```php
 // Get the REQUEST_URI.
 $requestURI = $_SERVER['REQUEST_URI'];
 
@@ -52,6 +53,17 @@ if (is_a($response, Doubotis\PHPRestWrapper\APIStructuredResponse::class)) {
 }
 ```
 
+### APIRequest
+You can build an APIRequest object from the `$_SERVER['REQUEST_URI']` var.
+From that, you can get:
+* the complete URI
+* the HTTP method
+* the resource
+* the extension
+* the filter
+* the sorting
+* the HTTP Headers
+
 ### Dispatchers
 You can choose an implementation of dispatcher you want to use.
 
@@ -84,20 +96,32 @@ public function get($request)
         "compilationDate" => time()
     );
     
-    return $arr;
+    return new Doubotis\PHPRestWrapper\Responses\APIStructuredResponse($arr);
 }
 ```
 Additionnaly, if you want to open DB connections or files, you can override `init()` and `dealloc()` methods.
 
-### APIRequest Object
-The `$request` parameter is an `APIRequest` object, allowing you to get :
-* the complete URI
-* the HTTP method
-* the resource
-* the extension
-* the filter
-* the sorting
-* the HTTP Headers
+### Response
+After asking to handle the request, you can get the response, inherited from `APIResponse`.
+This object is returned from any implementation class.
+```php
+$handler->handleRequest($request);
+$response = $handler->getResponse();
+```
+
+#### Response type `APIStructuredResponse`
+This implementation of `APIResponse` allows you to store full objects in a dictionary, and returns them as JSON or XML.
+```php
+echo $response->asJSON();
+echo $response->asXML();
+```
+
+#### Response type `APIBinaryResponse`
+This implementation could be used to return any binary data, like images, PDF, etc.
+If you want to return specifically a PNG image, you can use the response type `APIImageResponse` :
+```php
+echo $response->asPNG();
+```
 
 ### Throwing exceptions
 If something goes wrong into the process, you can throw many exceptions :

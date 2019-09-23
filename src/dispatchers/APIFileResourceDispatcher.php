@@ -87,7 +87,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
                 
                 // process the line read.
                 $step = 0;
-                $seps = split(" ", $line);
+                $seps = str_split(" ", $line);
                 $methods = array();
                 for ($i = 0; $i < count($seps); $i++) {
                     if ($seps[$i] == "GET" || $seps[$i] == "POST" || $seps[$i] == "DELETE" || $seps[$i] == "PUT")

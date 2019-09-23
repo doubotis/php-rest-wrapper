@@ -52,10 +52,12 @@ if (is_a($response, Doubotis\PHPRestWrapper\APIStructuredResponse::class)) {
 }
 ```
 
-### Specify new Resource
-To specify new resource, use the command.api file. The file is like a single .txt file structured as `<HTTP supported methods> <Servlet name> <regex url>`. Each line is a resource that can be accessed by several HTTP methods. The resource is specified with a regex.
+### Dispatchers
+You can choose an implementation of dispatcher you want to use.
 
-Example :
+#### Using `APIFileResourceDispatcher`
+This dispatcher allows you to define, from a txt file, which implementation classes you want to use, associated with a regex.
+Here is an exemple of this txt file:
 ```
 GET Base /
 GET POST Users /users
@@ -64,9 +66,13 @@ GET POST Me /me
 GET POST MeItIs /me/itis
 ```
 
-This example will create 5 resources "/", "/users", "/users/...", "/me", "/me/itis".
+#### Using `APIAnnotationDispatcher`
+If all your implementation classes are packed into a single directory, you can use this one, and define the method `getPath()` for each implementation class, that will be used to find the right class to use. The `getPath()` method must return a regex.
 
-### PHP Implementation Example
+#### Implementing a custom dispatcher and using it
+You can define a new class that extends `APIBaseDispatcher`, and customize the `getClassForRequest($request)` method, to fullfill your requirements.
+
+### Implementation Class
 For above example, let's see the `GET Base /` line.
 Create a `Base` class extending `NativeImplementation` implementing `IGetHandler` because this is the only supported method.
 Next, override the get method, like that :

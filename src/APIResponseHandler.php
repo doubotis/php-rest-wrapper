@@ -32,7 +32,7 @@ class APIResponseHandler
     private $_dispatcher = null;
     
     function __construct($request, $dispatcher) {
-        $_dispatcher = $dispatcher;
+        $this->_dispatcher = $dispatcher;
         $this->doImplementation($request);
     }
     
@@ -40,7 +40,7 @@ class APIResponseHandler
         
         try {
             
-            $h = $_dispatcher->getClassForRequest($request);
+            $h = $this->_dispatcher->getClassForRequest($request);
 
             if ($request->getHTTPMethod() == "GET" && method_exists($h, "get")) {
                 $obj = $h->get($request);

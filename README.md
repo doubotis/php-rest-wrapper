@@ -7,7 +7,50 @@ Some main features this PHP wrapper have :
 * Using reflexion to make coding easier
 * Handle XML and JSON responses. You use arrays, the Wrapper does the conversion.
 
+## How to install
+Add  the library in your composer.json file :
+```
+require {
+    "doubotis/php-rest-wrapper": "dev-master"
+}
+```
+
 ## How to use
+
+```
+// Get the REQUEST_URI.
+$requestURI = $_SERVER['REQUEST_URI'];
+
+// Build an API Request and pass the REQUEST_URI var.
+$request = new Doubotis\PHPRestWrapper\APIRequest($requestURI);
+
+// Build the dispatcher, that will help to use the right implementation method.
+// For production purposes, it's better to store it into $GLOBALS.
+$dispatcher = new Doubotis\PHPRestWrapper\Dispatchers\APIFileResourceDispatcher(__DIR__ . "/resource.txt");
+
+// Get a handler and pass a dispatcher to make the handle.
+$handler = new Doubotis\PHPRestWrapper\APIResponseHandler($dispatcher);
+
+// Ask the handle to get the response.
+$response = null;
+try {
+    $handler->handleRequest($request);
+    $response = $handler->getResponse();
+} catch (Exception $ex) {
+    die($ex->getMessage());
+}
+
+// Prints the result.
+if (is_a($response, Doubotis\PHPRestWrapper\APIStructuredResponse::class)) {
+    if ($request->getExtension() == "json") {
+        header('Content-Type: text/json');
+        echo $response->asJSON();
+    } else if ($request->getExtension() == "xml") {
+        header('Content-Type: text/xml');
+        echo $response->asXML();
+    }
+}
+```
 
 ### Specify new Resource
 To specify new resource, use the command.api file. The file is like a single .txt file structured as `<HTTP supported methods> <Servlet name> <regex url>`. Each line is a resource that can be accessed by several HTTP methods. The resource is specified with a regex.

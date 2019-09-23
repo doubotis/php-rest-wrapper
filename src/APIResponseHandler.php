@@ -31,12 +31,11 @@ class APIResponseHandler
     private $_obj = null;
     private $_dispatcher = null;
     
-    function __construct($request, $dispatcher) {
+    function __construct($dispatcher) {
         $this->_dispatcher = $dispatcher;
-        $this->doImplementation($request);
     }
     
-    private function doImplementation($request) {
+    private function handleRequest($request) {
         
         try {
             

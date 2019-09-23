@@ -66,11 +66,11 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
                 return $h;
             }
             else {
-                throw new Exception("Implementation class file error. Is the class '" . $class . "' well defined?");
+                throw new \Exception("Implementation class file error. Is the class '" . $class . "' well defined?");
             }
         }
         else {
-            throw new Exception("Implementation file error. Is the file '" . $file . "' exists inside 'impl' directory?");
+            throw new \Exception("Implementation file error. Is the file '" . $file . "' exists inside 'impl' directory?");
         }
         
     }

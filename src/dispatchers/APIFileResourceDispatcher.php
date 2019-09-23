@@ -82,7 +82,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
                 
-                if (Doubotis\PHPRestWrapper\Utils\str_starts_with($line, "#"))
+                if (\Doubotis\PHPRestWrapper\Utils\startsWithString($line, "#"))
                         continue;       // This is a comment line
                 
                 // process the line read.

@@ -20,7 +20,7 @@
 namespace Doubotis\PHPRestWrapper\Dispatchers;
 
 require_once 'APIBaseDispatcher.php';
-require_once 'utils/strings.php';
+require_once '../utils/strings.php';
 
 class APIFileResourceDispatcher extends APIBaseDispatcher
 {
@@ -81,7 +81,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
                 
-                if (str_starts_with($line, "#"))
+                if (Doubotis\PHPRestWrapper\Utils\str_starts_with($line, "#"))
                         continue;       // This is a comment line
                 
                 // process the line read.

@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+namespace Doubotis\PHPRestWrapper\Utils;
 
 // function defination to convert array to xml
 function array_to_xml($student_info, &$xml_student_info) {

@@ -20,7 +20,7 @@
 namespace Doubotis\PHPRestWrapper\Dispatchers;
 
 require_once 'APIBaseDispatcher.php';
-require_once '../utils/strings.php';
+require_once '/../utils/strings.php';
 
 class APIFileResourceDispatcher extends APIBaseDispatcher
 {

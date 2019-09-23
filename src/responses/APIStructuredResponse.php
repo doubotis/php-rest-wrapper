@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-require_once 'classes/responses/APIResponse.php';
-
 namespace Doubotis\PHPRestWrapper\Responses;
+
+require_once 'classes/responses/APIResponse.php';
 
 class APIStructuredResponse extends APIResponse {
     

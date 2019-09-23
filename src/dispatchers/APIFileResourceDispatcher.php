@@ -17,10 +17,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+namespace Doubotis\PHPRestWrapper\Dispatchers;
+
 require_once 'APIBaseDispatcher.php';
 require_once 'utils/strings.php';
-
-namespace Doubotis\PHPRestWrapper\Dispatchers;
 
 class APIFileResourceDispatcher extends APIBaseDispatcher
 {

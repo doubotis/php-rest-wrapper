@@ -16,10 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+namespace Doubotis\PHPRestWrapper\Responses;
 
 require_once 'classes/responses/APIBinaryResponse.php';
-
-namespace Doubotis\PHPRestWrapper\Responses;
 
 class APIImageResponse extends APIBinaryResponse {
     

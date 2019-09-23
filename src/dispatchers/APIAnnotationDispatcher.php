@@ -16,9 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-require_once 'APIBaseDispatcher.php';
-
 namespace Doubotis\PHPRestWrapper\Dispatchers;
+
+require_once 'APIBaseDispatcher.php';
 
 class APIAnnotationDispatcher extends APIBaseDispatcher
 {

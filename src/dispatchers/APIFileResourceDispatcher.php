@@ -28,7 +28,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
     
     function __construct($filePath) {
         //TODO Store vars into $GLOBALS.
-        $_patterns = $this->obtainConfig($filePath);
+        $this->_patterns = $this->obtainConfig($filePath);
     }
     
     public function getClassForRequest($request) {
@@ -38,8 +38,8 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
 
         // Loop inside the patterns to find the asked resource handler.
         $c = -1;
-        for ($i=0; $i < count($_patterns); $i++) {
-            $p = $_patterns[$i]["pattern"];
+        for ($i=0; $i < count($this->_patterns); $i++) {
+            $p = $this->_patterns[$i]["pattern"];
             $p = str_replace("\r\n", "", $p);
             $p = "~^" . $p . "$~";
             $res = preg_match($p, $resource);
@@ -53,7 +53,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
             throw new Exception("Resource not found");
 
         // If a handler is found, let's try to include file.
-        $class = $_patterns[$c]["class"];
+        $class = $this->_patterns[$c]["class"];
         $file = __DIR__ . "/../impl/" . $class . ".php";
         if (file_exists($file))
         {
@@ -77,6 +77,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
     
     function obtainConfig($filePath) {
         
+        $patterns = array();
         $handle = fopen($filePath, "r");
         if ($handle) {
             while (($line = fgets($handle)) !== false) {
@@ -104,6 +105,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
             fclose($handle);
         } else {
             // error opening the file.
+            throw new Exception("Error opening file ." + $filePath);
         }
         
         return $patterns;

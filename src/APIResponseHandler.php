@@ -35,7 +35,7 @@ class APIResponseHandler
         $this->_dispatcher = $dispatcher;
     }
     
-    private function handleRequest($request) {
+    public function handleRequest($request) {
         
         try {
             

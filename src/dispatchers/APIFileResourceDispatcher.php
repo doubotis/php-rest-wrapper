@@ -50,7 +50,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
         }
         // No handler found.
         if ($c == -1)
-            throw new Exception("Resource not found");
+            throw new \Exception("Resource not found");
 
         // If a handler is found, let's try to include file.
         $class = $this->_patterns[$c]["class"];
@@ -105,7 +105,7 @@ class APIFileResourceDispatcher extends APIBaseDispatcher
             fclose($handle);
         } else {
             // error opening the file.
-            throw new Exception("Error opening file ." + $filePath);
+            throw new \Exception("Error opening file ." + $filePath);
         }
         
         return $patterns;

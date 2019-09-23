@@ -16,12 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
-include_once __DIR__ . "/api-impl.php";
-include_once __DIR__ . "/api-exceptions.php";
-include_once __DIR__ . "/../impl/_native.php";
-
 namespace Doubotis\PHPRestWrapper;
+
+include_once __DIR__ . "/APIRequestImplementation.php";
+include_once __DIR__ . "/HTTPException.php";
 
 /* 
  * To change this license header, choose License Headers in Project Properties.

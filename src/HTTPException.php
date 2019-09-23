@@ -19,7 +19,7 @@
 
 namespace Doubotis\PHPRestWrapper;
 
-class HTTPException extends Exception
+class HTTPException extends \Exception
 {
     public function __construct($message = "HTTP Exception", $code = 500, Exception $previous = null)
     {
